@@ -1,40 +1,56 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# sky_hopper_game
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A reusable Flutter game package that provides the core logic, assets, and widgets for the Sky Hopper mini-game. Drop it into any Flutter app to embed a fully working game view and score tracking.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+[![pub version](https://img.shields.io/pub/v/sky_hopper_game.svg)](https://pub.dev/packages/sky_hopper_game)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- `GameView` widget that renders the Sky Hopper game canvas
+- Built-in audio and sound effect management
+- Provider-based state management for score, lives, etc.
+- Easily customize sprite assets and sound files
+- Example app showing basic integration
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+1. In your app’s `pubspec.yaml`, add:
+
+   ```yaml
+   dependencies:
+     sky_hopper_game: ^0.1.0
+   ```
+
+2. Run:
+   ```bash
+   flutter pub get
+   ```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:sky_hopper_game/sky_hopper_game.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Sky Hopper Demo')),
+        body: const Center(child: GameView()),
+      ),
+    );
+  }
+}
 ```
 
-## Additional information
+Assets (images, audio) are automatically packaged with the module; no additional setup is required for consuming apps.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-# sky_hopper_game
+## API Reference
+
+- `GameView`: The main widget that renders Sky Hopper.  
+ 

@@ -1,7 +1,10 @@
 name: sky_hopper_game
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: >
+  A reusable Flutter game package providing a ready-to-use Sky Hopper mini-game,
+  complete with sprite rendering, score management, and sound effects.
+version: 0.1.0   # bump this whenever you push a new release Your Name <youremail@example.com>
+homepage: https://github.com/savadmv/sky_hopper_game
+repository: https://github.com/savadmv/sky_hopper_game.git
 
 environment:
   sdk: ^3.8.0
